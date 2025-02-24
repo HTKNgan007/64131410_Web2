@@ -8,7 +8,6 @@
 <title>Hello JSP Example</title>
 </head>
 <body>
-<center>
 <h1> Hello JSP</h1>
 <%= new Date().toString() %>
 <%= "<br><b>Hôm nay tôi học JSP</b>" %>
@@ -20,6 +19,5 @@ int y = (int) Math.pow(x + 40, 2);
 <%= y %>
 <hr>
 <% out.print(y); %>
-</center>
 </body>
 </html>
