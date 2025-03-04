@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WelcomeController {
 	//URL cho action này tính từ root
 		@RequestMapping("/welcome")
-		public String welcome() {
+		public String welcome(){
 			// code xử lí
 			return "viewWelcome"; // view sẽ là file viewWelcome
 		}
