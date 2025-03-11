@@ -1,9 +1,12 @@
-package vn.nganha.SB_TruyenDuLieuSangView;
+package vn.nganha.SB_TruyenDuLieuSangView.controllers;
 
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import vn.nganha.SB_TruyenDuLieuSangView.models.Student;
+
 import org.springframework.ui.ModelMap;
 
 @Controller

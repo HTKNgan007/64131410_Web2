@@ -1,4 +1,4 @@
-package vn.nganha.SB_TruyenDuLieuSangView;
+package vn.nganha.SB_TruyenDuLieuSangView.models;
 
 public class Student {
 	private String mssv;
