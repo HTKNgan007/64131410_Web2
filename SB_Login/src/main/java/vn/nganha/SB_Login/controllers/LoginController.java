@@ -25,7 +25,7 @@ public class LoginController {
 		String mk = request.getParameter("password");
 		
 		if(dn.equals("NganHa") && mk.equals("Ngan710")) {
-			model.addAttribute("message", "Đăng nhập thành công");
+			return "aboutme";
 		} else {
 			model.addAttribute("message", "Sai tên đăng nhập hoặc mật khẩu.\n Đăng nhập thất bại!!");
 		}
