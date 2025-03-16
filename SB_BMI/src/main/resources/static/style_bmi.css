@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* Reset toàn bộ khoảng cách mặc định */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Định dạng body */
+body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Tổng container chứa cả calculator và ảnh */
+.container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+}
+
+/* Phần chính của form tính BMI */
+.bmi-calculator {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    width: 420px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tiêu đề */
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Các nhóm nhập liệu */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Ô input */
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-group input {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+.btn-calculate {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.btn-calculate:hover {
+    background-color: #e64942;
+}
+
+/* Kết quả BMI */
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.result h2 {
+    color: #444;
+}
+
+#bmi-result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+/* Phần ảnh thông tin BMI */
+.bmi-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bmi-info img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}

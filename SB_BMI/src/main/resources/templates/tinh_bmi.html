@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Tính BMI</title>
+<link rel="stylesheet" href="style_bmi.css">
+</head>
+<body>
+	<div class="container">
+        <div class="bmi-calculator">
+            <h1 class="title">Tính Chỉ số BMI</h1>
+            <form action="/bmi" method="post">
+                <div class="input-group">
+                    <label for="weight">Cân nặng (KG):</label>
+                    <input type="number" id="weight" name="weight" step="0.1" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="height">Chiều cao (M):</label>
+                    <input type="number" id="height" name="height" step="0.01" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="isAsian" name="isAsian">
+                    <label for="isAsian">Tôi là người châu Á</label>
+                </div>
+
+                <button type="submit" class="btn-calculate">Tính BMI</button>
+            </form>
+
+            <div class="result">
+                <h2>Kết quả:</h2>
+                <p id="bmi-result" th:text="${bmiResult}">Chưa có dữ liệu</p>
+            </div>
+        </div>
+
+        <!-- Phần thông tin BMI -->
+        <div class="bmi-info">
+            <img src="bmi-guide.jpg" alt="Hướng dẫn về BMI">
+            <img src="bmi-chart.jpg" alt="Bảng phân loại BMI">
+        </div>
+    </div>
+</body>
+</html>
