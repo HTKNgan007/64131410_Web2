@@ -18,18 +18,28 @@ public class LoginController {
 	}
 	
 	//Xu ly
+//	@RequestMapping(value = "/login", method = RequestMethod.POST)
+//	public String Login(HttpServletRequest request, Model model) {
+//		//Lay du lieu
+//		String dn = request.getParameter("id");
+//		String mk = request.getParameter("password");
+//		
+//		if(dn.equals("NganHa") && mk.equals("Ngan710")) {
+//			return "aboutme";
+//		} else {
+//			model.addAttribute("message", "Sai tên đăng nhập hoặc mật khẩu.\n Đăng nhập thất bại!!");
+//		}
+//		return "login";
+//	}
+	
+	// Xu ly
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String Login(HttpServletRequest request, Model model) {
-		//Lay du lieu
-		String dn = request.getParameter("id");
-		String mk = request.getParameter("password");
-		
-		if(dn.equals("NganHa") && mk.equals("Ngan710")) {
-			return "aboutme";
-		} else {
-			model.addAttribute("message", "Sai tên đăng nhập hoặc mật khẩu.\n Đăng nhập thất bại!!");
-		}
-		return "login";
+	public String Login(HttpServletRequest request, Model m) {
+		// Lay du lieu
+		String dnString = request.getParameter("id");
+		String mkString = request.getParameter("mk");
+		m.addAttribute("user", dnString);
+		return "chaodn";
 	}
 	
 }
