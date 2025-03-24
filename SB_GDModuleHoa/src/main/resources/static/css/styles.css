@@ -4,60 +4,44 @@ body{
 	padding:0;
 }
 
-.bg-gradient {
-    background: linear-gradient(90deg, #8B4513, #A0522D);
-}
-.navbar{
-	position:fixed;
-	  top: 0;
+.navbar {
+    position: fixed;
+    background-color: #000;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    padding: 10px 0;
 }
+
 .navbar-nav .nav-item .nav-link {
-    color: gradient;
-    transition: color 0.3s ease;
-    font-size:20px;
+    color: #fff;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #FFD700;
+    color: #e1593f;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.hero {
-    height: 85vh;
-    padding-top:500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: black;
-    padding: 20px;
-}
-
-.profile {
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: black;
-}
-
-.hero h1 {
-    font-size: 3rem;
+.navbar-nav .nav-item .nav-link.active {
+    color: #fff;
     font-weight: bold;
+    background-color: #e1593f !important;
+    border-radius: 5px;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.navbar-nav .nav-item .nav-link.active:hover {
+    color: #fff ;
+    background-color: #e1593f;
 }
+
 
 .footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }

@@ -9,8 +9,8 @@
 </head>
 <body>
 
-<div th:fragment="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<div th:fragment="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" th:href="@{/}">NganHa</a>
             <div class="collapse navbar-collapse">
@@ -22,7 +22,7 @@
                         <a class="nav-link" th:href="@{/about}">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contact}">Contact</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -32,12 +32,7 @@
 
     <div th:fragment="footer">
         <footer class="footer bg-dark text-white text-center py-3">
-            <p>&copy; 2025 NguyenBuiQuangHuy. All rights reserved.</p>
-            <div>
-                <a href="https://www.facebook.com/nguyen.bui.quang.huy.491359/" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.facebook.com/Bqminh79" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-            </div>
+            <p>&copy; HTKNgan</p>
         </footer>
     </div>
 
