@@ -5,14 +5,14 @@ body{
 }
 
 .navbar {
+	background: url('/bg.png') no-repeat center center;
+    background-size: cover;
     position: fixed;
-    background-color: #000;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     padding: 10px 0;
-    margin-bottom: 5rem;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -42,7 +42,7 @@ body{
 
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
 }

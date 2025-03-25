@@ -4,9 +4,9 @@ public class SinhVien {
 
 	private String mssv;
     private String hoTen;
-    private float diemTB;
+    private double diemTB;
     
-    public SinhVien(String mssv, String hoTen, double d) {
+    public SinhVien(String mssv, String hoTen, double diemTB) {
         this.mssv = mssv;
         this.hoTen = hoTen;
         this.diemTB = diemTB;
