@@ -12,6 +12,7 @@ body{
     width: 100%;
     z-index: 1000;
     padding: 10px 0;
+    margin-bottom: 5rem;
 }
 
 .navbar-nav .nav-item .nav-link {

@@ -6,7 +6,7 @@ public class SinhVien {
     private String hoTen;
     private float diemTB;
     
-    public SinhVien(String mssv, String hoTen, float diemTB) {
+    public SinhVien(String mssv, String hoTen, double d) {
         this.mssv = mssv;
         this.hoTen = hoTen;
         this.diemTB = diemTB;
@@ -20,7 +20,7 @@ public class SinhVien {
         return hoTen;
     }
 
-    public float getDiemTB() {
+    public double getDiemTB() {
         return diemTB;
     }
 
