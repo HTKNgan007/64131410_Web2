@@ -22,3 +22,9 @@
 <img width="300" alt="bmi_1" src="https://github.com/user-attachments/assets/e62c5ae9-703c-433f-9025-903520631dda" />
 <img width="300" alt="bmi_2" src="https://github.com/user-attachments/assets/f1d9a4b7-2a86-4e98-b99a-b7709b4cfa51" />
 <img width="300" alt="bmi_3" src="https://github.com/user-attachments/assets/10ed18ad-1a8c-44ce-a86d-939791b13c1f" />
+
+### Bài TongHopGK
+<img width="300" alt="Ảnh màn hình 2025-03-25 lúc 11 08 43" src="https://github.com/user-attachments/assets/a82e95af-87a4-49ad-a4a5-9f519a0f3e61" />
+<img width="300" alt="Ảnh màn hình 2025-03-25 lúc 11 08 56" src="https://github.com/user-attachments/assets/33d2dc80-a6c7-450c-9f3b-bb8f73d25add" />
+<img width="300" alt="Ảnh màn hình 2025-03-25 lúc 11 09 06" src="https://github.com/user-attachments/assets/05366020-ee32-4045-b86c-5cf0ebb7a9b2" />
+<img width="300" alt="Ảnh màn hình 2025-03-25 lúc 11 09 15" src="https://github.com/user-attachments/assets/0cc17f76-cfcc-429e-b059-afea784be3bc" />
