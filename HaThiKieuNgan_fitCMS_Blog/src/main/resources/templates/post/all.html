@@ -42,7 +42,7 @@
                                 <td th:text="*{title}"></td>
                                 <td th:text="*{categoryId}"></td>
                                 <td class="text-center">
-                                    <a th:href="@{post/view/{id}(id=*{id})}" class="btn btn-warning btn-sm">
+                                    <a th:href="@{/post/view/{id}(id=*{id})}" class="btn btn-warning btn-sm">
                                         <i class="fas fa-eye"></i>
                                     </a>
                                     <a th:href="@{/post/delete/{id}(id=*{id})}" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
