@@ -39,16 +39,55 @@ ArrayList<Post> dsPost = new ArrayList<>();
 	}
 	
 	@GetMapping("/page/all")
-	public String PageList() {
-		return "pagelist";
+	public String PageList(ModelMap m) {
+		m.addAttribute("dsPage", dsPage);
+		return "pageList";
 	}
 	
-	
-	
-	@GetMapping("/addNew")
-    public String AddNew() {
-        return "addNew";
+	@GetMapping("/page/new")
+    public String AddNewPage() {
+        return "addNewPage";
     }
 
+
+//    @PostMapping("/addStudent")
+//    public String addStudent(@RequestParam("mssv") String mssv,
+//                             					@RequestParam("hoTen") String hoTen,
+//                             					@RequestParam("diemTB") double diemTB) {
+//        SinhVien newStudent = new SinhVien(mssv, hoTen, diemTB);
+//        dsSinhVien.add(newStudent);
+//        return "redirect:/studentList"; 
+//    }
+//    
+//    @GetMapping("/delete/{mssv}")
+//    public String deleteStudent(@PathVariable("mssv") String mssv) {
+//        dsSinhVien.removeIf(sv -> sv.getMssv().equals(mssv));
+//        return "redirect:/studentList";
+//    }
+//
+//    @GetMapping("/edit/{mssv}")
+//    public String editStudent(@PathVariable("mssv") String mssv, ModelMap model) {
+//        for (SinhVien sv : dsSinhVien) {
+//            if (sv.getMssv().equals(mssv)) {
+//                model.addAttribute("student", sv);
+//                break;
+//            }
+//        }
+//        return "editStudent";
+//    }
+//
+//    @PostMapping("/updateStudent")
+//    public String updateStudent(@RequestParam("mssv") String mssv,
+//                                @RequestParam("hoTen") String hoTen,
+//                                @RequestParam("diemTB") double diemTB) {
+//        for (SinhVien sv : dsSinhVien) {
+//            if (sv.getMssv().equals(mssv)) {
+//                sv.setHoTen(hoTen);
+//                sv.setDiemTB(diemTB);
+//                break;
+//            }
+//        }
+//        return "redirect:/studentList";
+//    }
     
 }
