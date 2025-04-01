@@ -57,7 +57,7 @@ ArrayList<Post> dsPost = new ArrayList<>();
         String newId = String.valueOf(dsPage.size() + 1);
         Page newPage = new Page(newId, pageName, keyword, content, parentPageId);
         dsPage.add(newPage);
-        return "redirect:/pageList";
+        return "redirect:/page/all";
     }
 
 	@GetMapping("/page/view/{id}")
@@ -68,7 +68,7 @@ ArrayList<Post> dsPost = new ArrayList<>();
 	            break;
 	        }
 	    }
-	    return "viewPage";
+	    return "page/view";
 	}
 	
     @GetMapping("/page/delete/{id}")
@@ -98,6 +98,17 @@ ArrayList<Post> dsPost = new ArrayList<>();
         Post newPost = new Post(newId, title, content, categoryId);
         dsPost.add(newPost);
         return "redirect:/post/all";
+    }
+    
+    @GetMapping("/post/view/{id}")
+    public String viewPost(@PathVariable("id") String id, ModelMap model) {
+        for (Post post : dsPost) {
+            if (post.getId().equals(id)) {
+                model.addAttribute("post", post);
+                break;
+            }
+        }
+        return "post/view";
     }
 
     @GetMapping("/post/delete/{id}")
