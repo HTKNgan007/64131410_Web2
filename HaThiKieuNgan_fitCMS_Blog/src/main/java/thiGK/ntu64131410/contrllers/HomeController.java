@@ -38,9 +38,9 @@ ArrayList<Post> dsPost = new ArrayList<>();
 		return "index";
 	}
 	
-	@GetMapping("/about")
-	public String About() {
-		return "about";
+	@GetMapping("/page/all")
+	public String PageList() {
+		return "pagelist";
 	}
 	
 	

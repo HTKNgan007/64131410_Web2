@@ -17,13 +17,14 @@
     </div>
     
     <div th:fragment="sidebar">
-        <aside class="d-flex flex-column align-items-center bg-light vh-100 p-3">
+        <aside class="d-flex flex-column align-items-center bg-light p-3" style="height:85vh;">
             <img src="Logo-Khoa-CNTT-NTU.png" alt="Image" class="img-fluid rounded mb-3" style="width: 100%; height: auto;">
             <nav class="nav flex-column w-100">
-                <a class="nav-link text-dark" th:href="@{/}">Home</a>
-                <a class="nav-link text-dark" th:href="@{/about}">About</a>
-                <a class="nav-link text-dark" th:href="@{/studentList}">List</a>
-                <a class="nav-link text-dark" th:href="@{/addNew}">AddNew</a>
+                <a class="nav-link text-dark" th:href="@{/}">Dasdboard</a>
+                <a class="nav-link text-dark" th:href="@{/page/all}">Page - List</a>
+                <a class="nav-link text-dark" th:href="@{/page/new}">Page - AddNew</a>
+                <a class="nav-link text-dark" th:href="@{/post/all}">Post - List</a>
+                <a class="nav-link text-dark" th:href="@{/page/new}">Post - AddNew</a>
             </nav>
         </aside>
     </div>
