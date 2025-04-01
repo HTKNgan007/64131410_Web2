@@ -9,29 +9,44 @@
 <link rel="stylesheet" th:href="@{/css/style_list.css}">
 </head>
 <body>
-	<div th:replace="fragments::header"></div>
+    <div th:replace="fragments::header"></div>
     
     <div class="container mt-5 pt-5">
-        <div class="row" style="margin-top:5%;">
+        <div class="row mt-5">
             <div class="col-md-8 col-lg-9 mb-3">
                 <!-- Content section -->
                 <div class="content p-4 bg-white shadow-sm rounded">
-                    <table class="list_content">
-        			<thead>
-            		<tr>
-                		<th class="text-center">MSSV</th>
-		                <th class="text-center">Họ Tên</th>
-		                <th class="text-center">Điểm TB</th>
-            		</tr>
-        			</thead>
-			        <tbody>
-			            <tr th:each="sv : ${dsSV}" th:object="${sv}">
-			                <td th:text="*{mssv}"></td>
-			                <td th:text="*{hoTen}"></td>
-			                <td th:text="*{diemTB}"></td>
-			            </tr>
-	        		</tbody>
-    			</table>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h2>Danh Sách Sinh Viên</h2>
+                        <a href="/addNew" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Thêm mới
+                        </a>
+                    </div>
+                    <table class="table table-bordered text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>MSSV</th>
+                                <th>Họ Tên</th>
+                                <th>Điểm TB</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="sv : ${dsSV}" th:object="${sv}">
+                                <td th:text="*{mssv}"></td>
+                                <td th:text="*{hoTen}"></td>
+                                <td th:text="*{diemTB}"></td>
+                                <td class="text-center">
+                                    <a th:href="@{/edit/{id}(id=*{mssv})}" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a th:href="@{/delete/{id}(id=*{mssv})}" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="col-md-4 col-lg-3">
