@@ -60,40 +60,23 @@ ArrayList<Post> dsPost = new ArrayList<>();
         return "redirect:/pageList";
     }
 
+	@GetMapping("/page/view/{id}")
+	public String viewPage(@PathVariable("id") String id, ModelMap model) {
+	    for (Page page : dsPage) {
+	        if (page.getId().equals(id)) {
+	            model.addAttribute("page", page);
+	            break;
+	        }
+	    }
+	    return "viewPage";
+	}
+	
     @GetMapping("/page/delete/{id}")
     public String deletePage(@PathVariable("id") String id) {
         dsPage.removeIf(page -> page.getId().equals(id));
-        return "redirect:/page/pageList";
+        return "redirect:/page/all";
     }
 
-    @GetMapping("/page/edit/{id}")
-    public String editPage(@PathVariable("id") String id, ModelMap model) {
-        for (Page page : dsPage) {
-            if (page.getId().equals(id)) {
-                model.addAttribute("page", page);
-                break;
-            }
-        }
-        return "editPage";
-    }
-
-    @PostMapping("/page/update")
-    public String updatePage(@RequestParam("id") String id,
-                             @RequestParam("pageName") String pageName,
-                             @RequestParam("keyword") String keyword,
-                             @RequestParam("content") String content,
-                             @RequestParam("parentPageId") String parentPageId) {
-        for (Page page : dsPage) {
-            if (page.getId().equals(id)) {
-                page.setPageName(pageName);
-                page.setKeyword(keyword);
-                page.setContent(content);
-                page.setParentPageId(parentPageId);
-                break;
-            }
-        }
-        return "redirect:/page/pageList";
-    }
     
     
     @GetMapping("/post/all")
@@ -121,17 +104,6 @@ ArrayList<Post> dsPost = new ArrayList<>();
     public String deletePost(@PathVariable("id") String id) {
         dsPost.removeIf(post -> post.getId().equals(id));
         return "redirect:/post/all";
-    }
-
-    @GetMapping("/post/edit/{id}")
-    public String editPost(@PathVariable("id") String id, ModelMap model) {
-        for (Post post : dsPost) {
-            if (post.getId().equals(id)) {
-                model.addAttribute("post", post);
-                break;
-            }
-        }
-        return "editPost";
     }
 
 }
