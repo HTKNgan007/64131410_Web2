@@ -41,14 +41,59 @@ ArrayList<Post> dsPost = new ArrayList<>();
 	@GetMapping("/page/all")
 	public String PageList(ModelMap m) {
 		m.addAttribute("dsPage", dsPage);
-		return "pageList";
+		return "page/pageList";
 	}
 	
 	@GetMapping("/page/new")
     public String AddNewPage() {
-        return "addNewPage";
+        return "page/new";
     }
 
+	@PostMapping("/page/add")
+    public String addPage(@RequestParam("pageName") String pageName,
+                          @RequestParam("keyword") String keyword,
+                          @RequestParam("content") String content,
+                          @RequestParam("parentPageId") String parentPageId) {
+        String newId = String.valueOf(dsPage.size() + 1);
+        Page newPage = new Page(newId, pageName, keyword, content, parentPageId);
+        dsPage.add(newPage);
+        return "redirect:/pageList";
+    }
+
+    @GetMapping("/page/delete/{id}")
+    public String deletePage(@PathVariable("id") String id) {
+        dsPage.removeIf(page -> page.getId().equals(id));
+        return "redirect:/page/all";
+    }
+
+    @GetMapping("/page/edit/{id}")
+    public String editPage(@PathVariable("id") String id, ModelMap model) {
+        for (Page page : dsPage) {
+            if (page.getId().equals(id)) {
+                model.addAttribute("page", page);
+                break;
+            }
+        }
+        return "editPage";
+    }
+
+    @PostMapping("/page/update")
+    public String updatePage(@RequestParam("id") String id,
+                             @RequestParam("pageName") String pageName,
+                             @RequestParam("keyword") String keyword,
+                             @RequestParam("content") String content,
+                             @RequestParam("parentPageId") String parentPageId) {
+        for (Page page : dsPage) {
+            if (page.getId().equals(id)) {
+                page.setPageName(pageName);
+                page.setKeyword(keyword);
+                page.setContent(content);
+                page.setParentPageId(parentPageId);
+                break;
+            }
+        }
+        return "redirect:/page/all";
+    }
 
 //    @PostMapping("/addStudent")
 //    public String addStudent(@RequestParam("mssv") String mssv,

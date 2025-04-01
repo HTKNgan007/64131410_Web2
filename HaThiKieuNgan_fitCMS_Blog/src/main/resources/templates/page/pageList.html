@@ -36,15 +36,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="sv : ${dsPage}" th:object="${sv}">
-                                <td th:text="*{mssv}"></td>
-                                <td th:text="*{hoTen}"></td>
-                                <td th:text="*{diemTB}"></td>
+                            <tr th:each="page : ${dsPage}" th:object="${page}">
+                                <td th:text="*{id}"></td>
+                                <td th:text="*{pageName}"></td>
+                                <td th:text="*{parentPageId}"></td>
                                 <td class="text-center">
-                                    <a th:href="@{/edit/{id}(id=*{mssv})}" class="btn btn-warning btn-sm">
+                                    <a th:href="@{/edit/{id}(id=*{id})}" class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a th:href="@{/delete/{id}(id=*{mssv})}" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
+                                    <a th:href="@{/delete/{id}(id=*{id})}" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
