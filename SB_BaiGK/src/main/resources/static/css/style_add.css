@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .content{
-	height: 79vh;
+	height: fit-content;
+	min-height: 75vh;
 }
 .layout-table {
 	margin-top: 4rem;

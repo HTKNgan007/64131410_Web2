@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .content{
-	height: 79vh;
+	height: fit-content;
+	min-height: 75vh;
 }
 .list_content {
             width: 100%;

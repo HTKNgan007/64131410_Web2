@@ -9,7 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 79vh;
+    height: fit-content;
+	min-height: 75vh;
 }
 
 .card {
@@ -47,7 +48,7 @@ h1 {
     text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3);
 }
 
-p {
+.container p {
     font-size: 19px;
     color: #FFC1E3;
     font-weight: 500;

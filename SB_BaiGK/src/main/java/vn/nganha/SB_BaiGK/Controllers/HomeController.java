@@ -21,6 +21,31 @@ ArrayList<SinhVien> dsSinhVien = new ArrayList<>();
         dsSinhVien.add(new SinhVien("64131234", "Nguyễn Triệu Nam", 7));
         dsSinhVien.add(new SinhVien("64131000", "Hồ Quốc Anh", 9));
         dsSinhVien.add(new SinhVien("64137850", "Đào Quý Cường", 6.5));
+        ///
+//        dsSinhVien.add(new SinhVien("64131410", "Hà Thị Kiều Ngân", 8));
+//        dsSinhVien.add(new SinhVien("64131234", "Nguyễn Triệu Nam", 7));
+//        dsSinhVien.add(new SinhVien("64131000", "Hồ Quốc Anh", 9));
+//        dsSinhVien.add(new SinhVien("64137850", "Đào Quý Cường", 6.5));
+//        dsSinhVien.add(new SinhVien("64131410", "Hà Thị Kiều Ngân", 8));
+//        dsSinhVien.add(new SinhVien("64131234", "Nguyễn Triệu Nam", 7));
+//        dsSinhVien.add(new SinhVien("64131000", "Hồ Quốc Anh", 9));
+//        dsSinhVien.add(new SinhVien("64137850", "Đào Quý Cường", 6.5));
+//        dsSinhVien.add(new SinhVien("64131410", "Hà Thị Kiều Ngân", 8));
+//        dsSinhVien.add(new SinhVien("64131234", "Nguyễn Triệu Nam", 7));
+//        dsSinhVien.add(new SinhVien("64131000", "Hồ Quốc Anh", 9));
+//        dsSinhVien.add(new SinhVien("64137850", "Đào Quý Cường", 6.5));
+//        dsSinhVien.add(new SinhVien("64131410", "Hà Thị Kiều Ngân", 8));
+//        dsSinhVien.add(new SinhVien("64131234", "Nguyễn Triệu Nam", 7));
+//        dsSinhVien.add(new SinhVien("64131000", "Hồ Quốc Anh", 9));
+//        dsSinhVien.add(new SinhVien("64137850", "Đào Quý Cường", 6.5));
+//        dsSinhVien.add(new SinhVien("64131410", "Hà Thị Kiều Ngân", 8));
+//        dsSinhVien.add(new SinhVien("64131234", "Nguyễn Triệu Nam", 7));
+//        dsSinhVien.add(new SinhVien("64131000", "Hồ Quốc Anh", 9));
+//        dsSinhVien.add(new SinhVien("64137850", "Đào Quý Cường", 6.5));
+//        dsSinhVien.add(new SinhVien("64131410", "Hà Thị Kiều Ngân", 8));
+//        dsSinhVien.add(new SinhVien("64131234", "Nguyễn Triệu Nam", 7));
+//        dsSinhVien.add(new SinhVien("64131000", "Hồ Quốc Anh", 9));
+//        dsSinhVien.add(new SinhVien("64137850", "Đào Quý Cường", 6.5));
     }
 
 	@GetMapping("/")
