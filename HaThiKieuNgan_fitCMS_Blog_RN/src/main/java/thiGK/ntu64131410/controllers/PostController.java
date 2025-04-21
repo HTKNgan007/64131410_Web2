@@ -1,4 +1,4 @@
-package thiGK.ntu64131410.contrllers;
+package thiGK.ntu64131410.controllers;
 
 import java.util.ArrayList;
 

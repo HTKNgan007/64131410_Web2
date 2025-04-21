@@ -1,4 +1,4 @@
-package thiGK.ntu64131410.contrllers;
+package thiGK.ntu64131410.controllers;
 
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ public class PageController {
 	@GetMapping("/page/all")
 	public String PageList(ModelMap m) {
 		m.addAttribute("dsPage", dsPage);
-		return "page/pageList";
+		return "page/all";
 	}
 	
 	@GetMapping("/page/new")
