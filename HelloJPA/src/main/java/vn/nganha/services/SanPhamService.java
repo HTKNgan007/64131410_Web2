@@ -13,7 +13,7 @@ public class SanPhamService {
 
 		@Autowired
 		SanPhamRepository mySanPhamRepository;
-		public List<SanPham> allKH()
+		public List<SanPham> allSP()
 			{
 				return mySanPhamRepository.findAll();
 			}
