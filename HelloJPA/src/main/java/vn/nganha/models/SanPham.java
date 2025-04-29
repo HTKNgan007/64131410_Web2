@@ -6,14 +6,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "SanPham")
+@Table(name = "sanpham")
 public class SanPham {
 	@Id
 	@Column(name = "id")
 	private int id;
 
-	@Column(name = "TenSP", nullable = false, length = 255)
+	@Column(name = "tensp")
     private String tenSP;
+	
+	@Column(name = "giasp", nullable = false)
+    private float giaSP;
+
+    @Column(name = "mota", nullable = false, length = 1000)
+    private String moTa;
 	
 	public int getId() {
 		return id;
@@ -33,6 +39,22 @@ public class SanPham {
 
 	public SanPham() {
 		super();
+	}
+
+	public float getGiaSP() {
+		return giaSP;
+	}
+
+	public void setGiaSP(float giaSP) {
+		this.giaSP = giaSP;
+	}
+
+	public String getMoTa() {
+		return moTa;
+	}
+
+	public void setMoTa(String moTa) {
+		this.moTa = moTa;
 	}
 	
 }

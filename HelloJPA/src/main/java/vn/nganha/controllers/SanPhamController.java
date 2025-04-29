@@ -20,9 +20,8 @@ public class SanPhamController {
 	public String getAll(ModelMap m) {
 		List<SanPham> dsSPs= new ArrayList<SanPham>();
 		dsSPs = sanPhamService.allSP();
-		m.addAttribute("dsSP",dsSPs);
-		return "dssp";
+		m.addAttribute("dssp",dsSPs);
+		return "index";
 	}
 	
-
 }
